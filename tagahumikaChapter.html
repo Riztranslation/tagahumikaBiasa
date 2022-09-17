@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Epilogue&display=swap');
+
+        *,
+        html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Epilogue', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .chapter {
+            grid-area: midle;
+            color: gray;
+        }
+
+        .chapter2 {
+            grid-area: midle;
+            color: aliceblue;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .list {
+            display: grid;
+            margin: 10px;
+            cursor: pointer;
+            height: 140px;
+            overflow: scroll;
+            padding: 5px;
+        }
+
+        .list::-webkit-scrollbar {
+            width: 2px;
+            height: 0px;
+            opacity: 50%;
+        }
+
+        .list::-webkit-scrollbar-track {
+            box-shadow: inset aliceblue;
+        }
+
+        .list::-webkit-scrollbar-thumb {
+            background: grey;
+            border-radius: 10px;
+        }
+
+        .list a {
+            border-left: 3px solid #5c5c5c;
+            color: inherit;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1em;
+            margin: 2.5px;
+            display: block;
+            width: 99%;
+            padding: 2.5px;
+            /* height: 45px; */
+            font-weight: 500;
+        }
+
+        .list a:hover {
+            transition: 0.5s;
+            background-color: rgb(194, 203, 210);
+        }
+
+        .list p {
+            color: gray;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.6em;
+            width: 99%;
+            transform: translateY(-20%);
+            margin-left: 5px;
+            z-index: 2;
+            display: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="chapter" id="chapter">
+        <div class="list">
+            <a href="">Chapter 10<p id="ch10"></p></a>
+            <a href="">Chapter 9<p id="ch9"></p></a>
+            <a href="">Chapter 8<p id="ch8"></p></a>
+            <a href="">Chapter 7<p id="ch7"></p></a>
+            <a href="">Chapter 6<p id="ch6"></p></a>
+            <a href="">Chapter 5<p id="ch5"></p></a>
+            <a href="">Chapter 4<p id="ch4"></p></a>
+            <a href="">Chapter 3<p id="ch3"></p></a>
+            <a href="">Chapter 2<p id="ch2"></p></a>
+            <a href="chapter/chapter.html" target="_parent" >Chapter 1<p id="ch1"></p></a>
+        </div>
+    </div>
+    <script>
+
+        function timeAgo(date) {
+            let seconds = Math.floor((new Date().getTime() - new Date(date).getTime()) / 1000);
+            let interval = seconds / 31536000;
+            if (interval > 1) return Math.floor(interval) + " tahun lalu";
+            interval = seconds / 2592000;
+            if (interval > 1) return Math.floor(interval) + " bulan lalu";
+            interval = seconds / 86400;
+            if (interval > 1) return Math.floor(interval) + " hari lalu";
+            interval = seconds / 3600;
+            if (interval > 1) return Math.floor(interval) + " jam lalu";
+            interval = seconds / 60;
+            if (interval > 1) return Math.floor(interval) + " menit lalu";
+            return Math.floor(seconds) + " detik lalu";
+        }
+
+        document.getElementById('ch1').innerHTML = timeAgo('2022-08-31 18:44:00');
+        document.getElementById('ch2').innerHTML = timeAgo('2022-08-31 18:44:00');
+        document.getElementById('ch3').innerHTML = timeAgo('2022-08-31 18:44:00');
+        document.getElementById('ch4').innerHTML = timeAgo('2022-08-31 18:44:00');
+        document.getElementById('ch5').innerHTML = timeAgo('2022-08-31 18:44:00');
+        document.getElementById('ch6').innerHTML = timeAgo('2022-08-31 18:44:00');
+        document.getElementById('ch7').innerHTML = timeAgo('2022-08-31 18:44:00');
+        document.getElementById('ch8').innerHTML = timeAgo('2022-08-31 18:44:00');
+        document.getElementById('ch9').innerHTML = timeAgo('2022-08-31 18:44:00');
+        document.getElementById('ch10').innerHTML = timeAgo('2022-08-31 18:44:00');
+    </script>
+</body>
+
+</html>
