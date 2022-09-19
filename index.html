@@ -9,11 +9,14 @@
     <link rel="stylesheet" type="text/css" href="index.css">
     <link rel="shorcut icon" href="assets/Icon/rizlogo.ico">
 </head>
+
 <body>
     <!-- navbar -->
     <div class="container">
-        <ul class="style" >
-            <li><a ><div id="logo" class="logo"></div></a></li>
+        <ul class="style">
+            <li><a>
+                    <div id="logo" class="logo"></div>
+                </a></li>
             <li class="text"><a id="berandanav" href="https://riztranslation.mymanga.repl.co">Beranda</a></li>
             <li class="text"><a id="sosialnav" href="#sosial"></a></li>
             <li class="text"><a id="infonav" href="#info"></a></li>
@@ -27,7 +30,8 @@
     <!-- preview chapter -->
     <div class="main" id="main">
         <div class="sampul">
-            <center><img src="https://pbs.twimg.com/media/FaHhTVTUUAE-lFa?format=jpg&name=360x360" alt="sampul"></center>
+            <center><img src="https://pbs.twimg.com/media/FaHhTVTUUAE-lFa?format=jpg&name=360x360" alt="sampul">
+            </center>
         </div>
         <div class="detail">
             <h3>Tagahumika</h3>
@@ -37,29 +41,60 @@
                 <a href="">Drama</a>
                 <a href="">Web Comic</a>
                 <a href="">Slice of Life</a>
-                <br><p class="status">Status: Ongoing</p></br>
+                <br>
+                <p class="status">Status: Ongoing</p></br>
             </section>
             <div class="deskripsi">
-                <p>Wakui menjalani kehidupan kampus yang membosankan. Satu-satunya kesenangannya adalah korespondensi. Berawal dari sebuah surat yang ia temukan di perpustakaan universitas dan menjadi pusat kehidupan Wakui. Namun, suatu hari, Wakui menemukan sebuah surat yang berisi sesuatu yang tidak seharusnya diketahui oleh korespondennya. Wakui mencurigai bahwa koresponden mungkin adalah kenalannya, dan mulai mencurigai tiga gadis yang terkait dengannya. Namun, ketiga gadis itu agak eksentrik..</p>
+                <p>Wakui menjalani kehidupan kampus yang membosankan. Satu-satunya kesenangannya adalah korespondensi.
+                    Berawal dari sebuah surat yang ia temukan di perpustakaan universitas dan menjadi pusat kehidupan
+                    Wakui. Namun, suatu hari, Wakui menemukan sebuah surat yang berisi sesuatu yang tidak seharusnya
+                    diketahui oleh korespondennya. Wakui mencurigai bahwa koresponden mungkin adalah kenalannya, dan
+                    mulai mencurigai tiga gadis yang terkait dengannya. Namun, ketiga gadis itu agak eksentrik..</p>
             </div>
         </div>
         <div class="chapter" id="chapter">
-            <div ><h4 class="header">Chapter List</h4></div>
+            <div>
+                <h4 class="header">Chapter List</h4>
+            </div>
             <iframe src="tagahumikaChapter.html" width="100%" scrolling="no" frameborder="0"></iframe>
         </div>
     </div>
-    <center><div class="fb-comments" data-href="https://Riztranslation.com" data-width="100%" data-numposts="5"></div></center>
+    <div class="kolom-komen">
+        <button id="komentar" class="komen--btn" onclick="komentar()">Komentar</button>
+        <script>
+            function komentar() {
+                const btn = document.getElementById('komentar');
+                const kolom = document.getElementById('kolom');
+                btn.style.display = 'none';
+                kolom.style.display = 'flex';
+            }
+        </script>
+        <div id="kolom" class="comment">
+            <div class="like">
+                <div class="fb-like" data-href="https://riztranslation.com" data-width="50px" data-layout="box_count"
+                    data-action="like" data-size="small" data-share="true"></div>
+            </div>
+            <div id="fb-root"></div>
+            <script async defer crossorigin="anonymous"
+                src="https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v15.0" nonce="TLbwEQDo"></script>
+            <div class="fb-comments" data-width="100%" data-href="tagahumika.mymanga.repl.co" data-numposts="5"></div>
+        </div>
+    </div>
     <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v14.0" nonce="ynaffEf6"></script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v14.0"
+        nonce="ynaffEf6"></script>
     <div class="info" id="info">
         <div class="sosmed">
             <a href="https://fb.me/riztranslation" class="icons">Fanpage</a>
-            <a href="https://instagram.com/invites/contact/?i=sdw2o312a52w&utm_content=hchf9z6" class="icons">Instagram</a>
+            <a href="https://instagram.com/invites/contact/?i=sdw2o312a52w&utm_content=hchf9z6"
+                class="icons">Instagram</a>
             <a href="https://discord.gg/tTCzyaP9sj" class="icons">Discord</a>
         </div>
 
         <center>
-            <p class="deskripsifoot">Semua komik yang ada di website ini hanya preview dari komik aslinya, jadi mungkin akan ada kesalahan penerjemahan nama, alur cerita, atau yang lainnya. untuk komik aslinya bisa kalian beli di toko-toko terdekat yang tersedia.</p>
+            <p class="deskripsifoot">Semua komik yang ada di website ini hanya preview dari komik aslinya, jadi mungkin
+                akan ada kesalahan penerjemahan nama, alur cerita, atau yang lainnya. untuk komik aslinya bisa kalian
+                beli di toko-toko terdekat yang tersedia.</p>
         </center>
         <div class="bawah">
             <p class="powered">Dibuat Oleh ©Riztranslation 2022 </p>
@@ -67,4 +102,5 @@
     </div>
     <script src="script.js" type="application/javascript"></script>
 </body>
+
 </html>

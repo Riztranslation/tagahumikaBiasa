@@ -18,6 +18,7 @@
     background-color: rgb(47, 42, 42);
     width: 100%;
     height: 100%;
+    color: aliceblue;
 }
 .container{
      position: sticky;
@@ -305,6 +306,35 @@
     position: relative;
     line-height: 1.6;
     font-size: 0.9em;
+}
+.komen--btn{
+    cursor: pointer;
+    border-radius: 3px;
+    background-color: inherit;
+    border: solid 1px gray;
+    display: inline-block;
+    height: 30px;
+    width: 100px;
+    color: inherit;
+}
+.comment{
+    padding: 5px;
+    background-color: aliceblue;
+    border-radius: 5px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.kolom-komen{
+    color: inherit;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fb-like{
+    filter: grayscale(100%);
 }
  @media only screen and (max-width: 500px) {
  .main{
