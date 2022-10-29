@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=true">
+    <title>Riztranslation - Chapter</title>
+    <!-- <link rel="stylesheet" type="text/css" href="chapter.css"> -->
+    <link rel="stylesheet" type="text/css" href="../index.css">
+    <link rel="shorcut icon" href="../assets/Icon/rizlogo.ico">
+    <link rel="preload" as="image" href="home.svg">
+    <link rel="preload" as="image" href="list.svg">
+    <style>
+        body {
+            overflow: hidden;
+        }
+        .bungkus{
+            height: 125vh;
+        }
+        .logoch {
+            transition: 3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            opacity: 90%;
+            border-radius: 5px;
+            height: 25px;
+            width: 30px;
+            background-repeat: no-repeat;
+            background-image: url(../assets/Icon/rizlogo.png);
+            background-size: contain;
+        }
+
+        .togglech {
+            position: absolute;
+            opacity: 0%;
+            margin-top: 5px;
+            margin-right: 5px;
+            border: none;
+            border-radius: 5px;
+            width: 30px;
+            height: 25px;
+            display: inline-block;
+            background-color: rgb(47, 42, 42);
+            cursor: pointer;
+            color: aliceblue;
+        }
+
+        .tombol {
+            position: fixed;
+        }
+    </style>
+</head>
+
+<body oncontextmenu="return false;" ondragstart="return false;">
+    <div id="chapter1" class="bungkus">
+        <div class="grid kiri">
+            <div class="logo--">
+                <div id="logo" class="logoch"></div>
+                <h3>Riztranslation</h3><button id="mode" class="togglech">◩</button>
+            </div>
+            <div id="navlogo" class="ch--style">
+                <a class="logos" target="_top" href="../index.html"><img class="logo--style" src="home.svg" alt="">
+                    <p>Beranda Manga</p>
+                </a>
+                <a class="logos" onclick="chapter()" href="#"><img class="logo--style listch" src="list.svg" alt="">
+                    <p>Chapter List</p>
+                </a>
+            </div>
+        </div>
+        <div class="grid kanan">
+            <div class="tombol"><button id="btn" class="komen--btn" onclick="buka()">Buka Chapter</button></div>
+            <script>
+                function buka() {
+                    const btn = document.getElementById('btn');
+                    const isi = document.getElementById('isi');
+                    btn.style.display = 'none';
+                    isi.src = '../iframe/c2.html';
+                }
+                function chapter() {
+                    const btn = document.getElementById('btn');
+                    const isi = document.getElementById('isi');
+                    btn.style.display = 'block';
+                    isi.src = '../tagahumikaChapter.html';
+                }
+            </script>
+            <iframe id="isi" width="100%" height="100%" src="" loading="lazy" frameborder="0"></iframe>
+        </div>
+    </div>
+    <script>
+        const toggle = document.getElementById('mode');
+        const logo = document.getElementById('logo');
+        const navlogo = document.getElementById('navlogo');
+        let tema = localStorage.getItem('tema');
+
+        const modeGelap = () => {
+            document.body.classList.add('body2');
+            logo.style.filter = 'invert(85%)';
+            localStorage.setItem('tema', 'gelap');
+        };
+
+        const modeCerah = () => {
+            document.body.classList.remove('body2')
+            logo.style.filter = 'invert(0%)';
+            localStorage.setItem('tema', 'cerah')
+        };
+
+        if (tema === 'gelap') {
+            modeGelap();
+        }
+
+        toggle.addEventListener("click", (e) => {
+            tema = localStorage.getItem('tema');
+            if (tema === 'cerah') {
+                modeGelap();
+            } else {
+                modeCerah();
+            }
+        });
+    </script>
+</body>
+
+</html>

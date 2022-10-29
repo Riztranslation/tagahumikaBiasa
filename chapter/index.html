@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=false">
+    <title>Riztranslation - Chapter</title>
+    <link rel="shorcut icon" href="../assets/Icon/rizlogo.ico">
+    <link rel="preload" as="image" href="assets/Icon/rizlogo.svg">
+    <link rel="preload" as="image" href="home.svg">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Epilogue&display=swap');
+
+        *,
+        html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Epilogue', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            transition: background-color 3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            background-color: aliceblue;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+        }
+        .parent{
+            height: 100%;
+            width: 100%;
+            white-space: nowrap;
+        }
+        .child {
+            width: 100%;
+            height: 100%;
+            display: inline-block;
+        }
+
+        .chcontainer {
+            height: 100vh;
+        }
+
+        .btn {
+            position: absolute;
+            z-index: 2;
+            transform: translateY(145%);
+            width: 16%;
+        }
+
+        .logos {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            filter: invert(85%);
+            margin-bottom: 5px;
+        }
+
+        .logos p {
+            color: gray;
+            font-family: 'Poppins', sans-serif;
+            font-size: small;
+            height: 40px;
+            display: flex;
+            width: 100%;
+            align-items: center;
+        }
+
+        .logo--style {
+            display: flex;
+            height: 20px;
+            align-items: center;
+            gap: 10px;
+            padding: 10px;
+            margin: 5px;
+            background-color: gray;
+        }
+
+        .logo--style:hover {
+            background-color: rgba(128, 128, 128, 0.183);
+        }
+
+        .sebelumnya {
+            transform: rotate(180deg);
+        }
+
+        @media only screen and (max-width: 700px) {
+            .logos p {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="child">
+            <div class="btn">
+                <a class="logos" onclick="iframe()" href="#2"><img class="logo--style index" src="next.svg" alt="">
+                    <p>Selanjutnya</p>
+                </a>
+                <a class="logos" href="../index.html"><img class="sebelumnya logo--style index" src="next.svg" alt="">
+                    <p>Sebelumnya</p>
+                </a>
+            </div>
+            <div class="chcontainer">
+                <iframe id="1" src="ch1.html" frameborder="0" width="100%" height="100%" loading="lazy"></iframe>
+            </div>
+        </div>
+        <div class="child">
+            <div class="btn">
+                <a class="logos" onclick="iframe()" href="#3"><img class="logo--style index" src="next.svg" alt="">
+                    <p>Selanjutnya</p>
+                </a>
+                <a class="logos" href="#1" onclick="iframe()"><img class=" sebelumnya logo--style index" src="next.svg"
+                        alt="">
+                    <p>Sebelumnya</p>
+                </a>
+            </div>
+            <div class="chcontainer">
+                <iframe id="2" src="ch2.html" frameborder="0" width="100%" height="100%" loading="lazy"></iframe>
+            </div>
+        </div>
+        <div class="child">
+            <div class="btn">
+                <a class="logos" onclick="iframe()" href="#4"><img class="logo--style index" src="next.svg" alt="">
+                    <p>Selanjutnya</p>
+                </a>
+                <a class="logos" href="#2" onclick="iframe()"><img class=" sebelumnya logo--style index" src="next.svg"
+                        alt="">
+                    <p>Sebelumnya</p>
+                </a>
+            </div>
+            <div class="chcontainer">
+                <iframe id="3" src="ch3.html" frameborder="0" width="100%" height="100%" loading="lazy"></iframe>
+            </div>
+        </div>
+    </div>
+    <script>
+        function iframe() {
+            const q = document.getElementById("1");
+            const w = document.getElementById("2");
+            const e = document.getElementById("3");
+            q.src += '';
+            w.src += '';
+            e.src += '';
+        }
+    </script>
+</body>
+
+</html>

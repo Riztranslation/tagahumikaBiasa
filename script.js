@@ -49,25 +49,3 @@ toggle.addEventListener("click", (e) =>{
     }
 });
 
-// time
-
-function timeAgo(date) {
-    let seconds = Math.floor((new Date().getTime() - new Date(date).getTime()) / 1000);
-    let interval = seconds / 31536000;
-    if (interval > 1) return Math.floor (interval) + " tahun lalu";
-    interval = seconds / 2592000;
-    if (interval > 1) return Math.floor (interval) + " bulan lalu";
-    interval = seconds / 86400;
-    if (interval > 1) return Math.floor (interval) + " hari lalu";
-    interval = seconds / 3600;
-    if (interval > 1) return Math.floor (interval) + " jam lalu";
-    interval = seconds / 60;
-    if (interval > 1) return Math.floor (interval) + " menit lalu";
-    return Math.floor(seconds) + " detik lalu";
-}
-
-document.getElementById('ch1').innerHTML = timeAgo('2022-08-31 18:44:00');
-document.getElementById('ch2').innerHTML = timeAgo('2022-08-31 18:44:00');
-document.getElementById('ch3').innerHTML = timeAgo('2022-08-31 18:44:00');
-document.getElementById('ch4').innerHTML = timeAgo('2022-08-31 18:44:00');
-document.getElementById('ch5').innerHTML = timeAgo('2022-08-31 18:44:00');
