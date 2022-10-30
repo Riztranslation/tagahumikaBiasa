@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=false">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=false">
     <title>Riztranslation - Chapter</title>
     <link rel="shorcut icon" href="../assets/Icon/rizlogo.ico">
     <link rel="preload" as="image" href="assets/Icon/rizlogo.svg">
@@ -106,7 +106,7 @@
                 </a>
             </div>
             <div class="chcontainer">
-                <iframe id="1" src="ch1.html" frameborder="0" width="100%" height="100%" loading="lazy"></iframe>
+                <iframe id="1" src="ch1.html" name="chiframe" frameborder="0" width="100%" height="100%" loading="lazy"></iframe>
             </div>
         </div>
         <div class="child">
@@ -120,7 +120,7 @@
                 </a>
             </div>
             <div class="chcontainer">
-                <iframe id="2" src="ch2.html" frameborder="0" width="100%" height="100%" loading="lazy"></iframe>
+                <iframe id="2" src="ch2.html" name="chiframe" frameborder="0" width="100%" height="100%" loading="lazy"></iframe>
             </div>
         </div>
         <div class="child">
@@ -134,7 +134,105 @@
                 </a>
             </div>
             <div class="chcontainer">
-                <iframe id="3" src="ch3.html" frameborder="0" width="100%" height="100%" loading="lazy"></iframe>
+                <iframe id="3" src="ch3.html" name="chiframe" frameborder="0" width="100%" height="100%" loading="lazy"></iframe>
+            </div>
+        </div>
+        <div class="child">
+            <div class="btn">
+                <a class="logos" onclick="iframe()" href="#5"><img class="logo--style index" src="next.svg" alt="">
+                    <p>Selanjutnya</p>
+                </a>
+                <a class="logos" href="#3" onclick="iframe()"><img class=" sebelumnya logo--style index" src="next.svg"
+                        alt="">
+                    <p>Sebelumnya</p>
+                </a>
+            </div>
+            <div class="chcontainer">
+                <iframe id="4" src="ch4.html" name="chiframe" frameborder="0" width="100%" height="100%" loading="lazy"></iframe>
+            </div>
+        </div>
+        <div class="child">
+            <div class="btn">
+                <a class="logos" onclick="iframe()" href="#6"><img class="logo--style index" src="next.svg" alt="">
+                    <p>Selanjutnya</p>
+                </a>
+                <a class="logos" href="#4" onclick="iframe()"><img class=" sebelumnya logo--style index" src="next.svg"
+                        alt="">
+                    <p>Sebelumnya</p>
+                </a>
+            </div>
+            <div class="chcontainer">
+                <iframe id="5" src="ch5.html" name="chiframe" frameborder="0" width="100%" height="100%" loading="lazy"></iframe>
+            </div>
+        </div>
+        <div class="child">
+            <div class="btn">
+                <a class="logos" onclick="iframe()" href="#7"><img class="logo--style index" src="next.svg" alt="">
+                    <p>Selanjutnya</p>
+                </a>
+                <a class="logos" href="#5" onclick="iframe()"><img class=" sebelumnya logo--style index" src="next.svg"
+                        alt="">
+                    <p>Sebelumnya</p>
+                </a>
+            </div>
+            <div class="chcontainer">
+                <iframe id="6" src="ch6.html" name="chiframe" frameborder="0" width="100%" height="100%" loading="lazy"></iframe>
+            </div>
+        </div>
+        <div class="child">
+            <div class="btn">
+                <a class="logos" onclick="iframe()" href="#8"><img class="logo--style index" src="next.svg" alt="">
+                    <p>Selanjutnya</p>
+                </a>
+                <a class="logos" href="#6" onclick="iframe()"><img class=" sebelumnya logo--style index" src="next.svg"
+                        alt="">
+                    <p>Sebelumnya</p>
+                </a>
+            </div>
+            <div class="chcontainer">
+                <iframe id="7" src="ch7.html" name="chiframe" frameborder="0" width="100%" height="100%" loading="lazy"></iframe>
+            </div>
+        </div>
+        <div class="child">
+            <div class="btn">
+                <a class="logos" onclick="iframe()" href="#9"><img class="logo--style index" src="next.svg" alt="">
+                    <p>Selanjutnya</p>
+                </a>
+                <a class="logos" href="#7" onclick="iframe()"><img class=" sebelumnya logo--style index" src="next.svg"
+                        alt="">
+                    <p>Sebelumnya</p>
+                </a>
+            </div>
+            <div class="chcontainer">
+                <iframe id="8" src="ch8.html" name="chiframe" frameborder="0" width="100%" height="100%" loading="lazy"></iframe>
+            </div>
+        </div>
+        <div class="child">
+            <div class="btn">
+                <a class="logos" onclick="iframe()" href="#10"><img class="logo--style index" src="next.svg" alt="">
+                    <p>Selanjutnya</p>
+                </a>
+                <a class="logos" href="#8" onclick="iframe()"><img class=" sebelumnya logo--style index" src="next.svg"
+                        alt="">
+                    <p>Sebelumnya</p>
+                </a>
+            </div>
+            <div class="chcontainer">
+                <iframe id="9" src="ch9.html" name="chiframe" frameborder="0" width="100%" height="100%" loading="lazy"></iframe>
+            </div>
+        </div>
+        <div class="child">
+            <div class="btn">
+                <a class="logos" onclick="iframe()" href="#11"><img class="logo--style index" src="next.svg" alt="">
+                    <p>Selanjutnya</p>
+                </a>
+                <a class="logos" href="#9" onclick="iframe()"><img class=" sebelumnya logo--style index" src="next.svg"
+                        alt="">
+                    <p>Sebelumnya</p>
+                </a>
+            </div>
+            <div class="chcontainer">
+                <iframe id="10" src="ch10.html" name="chiframe" frameborder="0" width="100%" height="100%" loading="lazy"></iframe>
             </div>
         </div>
     </div>
@@ -143,9 +241,23 @@
             const q = document.getElementById("1");
             const w = document.getElementById("2");
             const e = document.getElementById("3");
+            const r = document.getElementById("4");
+            const t = document.getElementById("5");
+            const y = document.getElementById("6");
+            const u = document.getElementById("7");
+            const i = document.getElementById("8");
+            const o = document.getElementById("9");
+            const p = document.getElementById("10");
             q.src += '';
             w.src += '';
             e.src += '';
+            r.src += '';
+            t.src += '';
+            y.src += '';
+            u.src += '';
+            i.src += '';
+            o.src += '';
+            p.src += '';
         }
     </script>
 </body>

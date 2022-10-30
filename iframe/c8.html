@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <!-- <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title> -->
+        <style>
+                @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;800&display=swap');
+
+                *,
+                html {
+                        padding: 0;
+                        margin: 0;
+                        box-sizing: border-box;
+                }
+
+                body {
+                        font-family: 'Poppins', sans-serif;
+                        color: gray;
+                }
+
+                img {
+                        display: block;
+                        cursor: default;
+                        width: 100%;
+                        height: 100%;
+                }
+
+                .header {
+                        position: sticky;
+                        color: aliceblue;
+                        display: flex;
+                        width: 100%;
+                        align-items: center;
+                        justify-content: center;
+                        font-weight: 300;
+                        background-color: gray;
+                }
+
+                br {
+                        display: none;
+                }
+
+                body::-webkit-scrollbar {
+                        width: 5px;
+                        height: 0px;
+                        background-color: rgb(181, 185, 189);
+                }
+
+                body::-webkit-scrollbar-track {
+                        box-shadow: inset aliceblue;
+                }
+
+                body::-webkit-scrollbar-thumb {
+                        background: grey;
+                }
+
+                .loading {
+                        transform: translate(5%, 10%);
+                        position: fixed;
+                        font-size: small;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: gray;
+                        text-shadow: 0 0 10px #FFFFFF;
+                        animation: myAnim 2s ease 0s infinite normal forwards;
+                }
+
+                @keyframes myAnim {
+
+                        0%,
+                        50%,
+                        100% {
+                                opacity: 1;
+                        }
+
+                        25%,
+                        75% {
+                                opacity: 0;
+                        }
+                }
+
+                .border {
+                        background-color: inherit;
+                        font-family: 'Poppins', sans-serif;
+                        display: flex;
+                        align-items: flex-end;
+                        justify-content: left;
+                        padding: 5px;
+                        color: inherit;
+                }
+
+                .bawah {
+                        height: 80px;
+                        border-top: 1px solid gray;
+                }
+
+                .atas {
+                        height: 50px;
+                        border-bottom: 1px solid gray;
+
+                }
+
+                .komen--btn {
+                        cursor: pointer;
+                        border-radius: 3px;
+                        background-color: inherit;
+                        border: solid 1px gray;
+                        display: inline-block;
+                        height: 30px;
+                        width: 100px;
+                        color: inherit;
+                }
+
+                #komentar {
+                        animation: fadeIn 0.5s;
+                }
+
+                .komen {
+                        display: none;
+                }
+
+                #kolom {
+                        margin: 10px;
+                        background-color: gray;
+                        border-radius: 3px;
+                        padding: 10px;
+                        animation: fadeIn 0.5s;
+                }
+
+                .bungkus--btn {
+                        height: 100px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 100%;
+                }
+
+                @-webkit-keyframes fadeIn {
+                        from {
+                                opacity: 0;
+                        }
+
+                        to {
+                                opacity: 1;
+                        }
+                }
+
+                @keyframes fadeIn {
+                        from {
+                                opacity: 0;
+                        }
+
+                        to {
+                                opacity: 1;
+                        }
+                }
+        </style>
+</head>
+
+<body onload="loads()">
+        <center>
+                <div oncontextmenu="return false;" ondragstart="return false;" onclick="return false" class="bungkus">
+                        <div id="loading" class="loading">Elemen sedang dimuat...</div>
+                        <a href="https://imgbox.com/EkdrU1L6" target="_blank"><img
+                                        src="https://images2.imgbox.com/7b/06/EkdrU1L6_o.png" alt="Tagahumika chapter 8" /></a> <a
+                                href="https://imgbox.com/YNTUokVA" target="_blank"><img
+                                        src="https://images2.imgbox.com/87/6d/YNTUokVA_o.jpg" alt="Tagahumika chapter 8" /></a> <a
+                                href="https://imgbox.com/XI5xCpIl" target="_blank"><img
+                                        src="https://images2.imgbox.com/23/11/XI5xCpIl_o.jpg" alt="Tagahumika chapter 8" /></a> <a
+                                href="https://imgbox.com/k84HzNx0" target="_blank"><img
+                                        src="https://images2.imgbox.com/bb/27/k84HzNx0_o.png" alt="Tagahumika chapter 8" /></a> <a
+                                href="https://imgbox.com/3h2fYsTg" target="_blank"><img
+                                        src="https://images2.imgbox.com/d4/15/3h2fYsTg_o.png" alt="Tagahumika chapter 8" /></a> <a
+                                href="https://imgbox.com/1zb12fEB" target="_blank"><img
+                                        src="https://images2.imgbox.com/f3/b0/1zb12fEB_o.png" alt="Tagahumika chapter 8" /></a> <a
+                                href="https://imgbox.com/ADfjRf6F" target="_blank"><img
+                                        src="https://images2.imgbox.com/bf/f5/ADfjRf6F_o.png" alt="Tagahumika chapter 8" /></a> <a
+                                href="https://imgbox.com/9VgmomtC" target="_blank"><img
+                                        src="https://images2.imgbox.com/cd/e7/9VgmomtC_o.png" alt="Tagahumika chapter 8" /></a> <a
+                                href="https://imgbox.com/RmZrKNu8" target="_blank"><img
+                                        src="https://images2.imgbox.com/a7/bf/RmZrKNu8_o.png" alt="Tagahumika chapter 8" /></a> <a
+                                href="https://imgbox.com/dR12SHYX" target="_blank"><img
+                                        src="https://images2.imgbox.com/0f/81/dR12SHYX_o.png" alt="Tagahumika chapter 8" /></a> <a
+                                href="https://imgbox.com/3yYToa7N" target="_blank"><img
+                                        src="https://images2.imgbox.com/14/13/3yYToa7N_o.png" alt="Tagahumika chapter 8" /></a> <a
+                                href="https://imgbox.com/5Ol94LTH" target="_blank"><img
+                                        src="https://images2.imgbox.com/9f/96/5Ol94LTH_o.png" alt="Tagahumika chapter 8" /></a> <a
+                                href="https://imgbox.com/snI5OefO" target="_blank"><img
+                                        src="https://images2.imgbox.com/4e/72/snI5OefO_o.png" alt="Tagahumika chapter 8" /></a> <a
+                                href="https://imgbox.com/OPZNLvre" target="_blank"><img
+                                        src="https://images2.imgbox.com/fe/5d/OPZNLvre_o.png" alt="Tagahumika chapter 8" /></a> <a
+                                href="https://imgbox.com/SAIwDUXb" target="_blank"><img
+                                        src="https://images2.imgbox.com/60/72/SAIwDUXb_o.png" alt="Tagahumika chapter 8" /></a> <a
+                                href="https://imgbox.com/9VpTRzeA" target="_blank"><img
+                                        src="https://images2.imgbox.com/aa/69/9VpTRzeA_o.png" alt="Tagahumika chapter 8" /></a> <a
+                                href="https://imgbox.com/DJLMRbKM" target="_blank"><img
+                                        src="https://images2.imgbox.com/e4/ca/DJLMRbKM_o.png" alt="Tagahumika chapter 8" /></a> <a
+                                href="https://imgbox.com/YkBGltyD" target="_blank"><img
+                                        src="https://images2.imgbox.com/1e/f6/YkBGltyD_o.png" alt="Tagahumika chapter 8" /></a> <a
+                                href="https://imgbox.com/MOdwJtfB" target="_blank"><img
+                                        src="https://images2.imgbox.com/b0/36/MOdwJtfB_o.png" alt="Tagahumika chapter 8" /></a> <a
+                                href="https://imgbox.com/7VigaTTZ" target="_blank"><img
+                                        src="https://images2.imgbox.com/ea/f7/7VigaTTZ_o.png" alt="Tagahumika chapter 8" /></a> <a
+                                href="https://imgbox.com/zkWjM9FM" target="_blank"><img
+                                        src="https://images2.imgbox.com/3e/ed/zkWjM9FM_o.png" alt="Tagahumika chapter 8" /></a> <a
+                                href="https://imgbox.com/HeVnQCZe" target="_blank"><img
+                                        src="https://images2.imgbox.com/4a/c1/HeVnQCZe_o.png" alt="Tagahumika chapter 8" /></a> <a
+                                href="https://imgbox.com/v9RIgQtY" target="_blank"><img
+                                        src="https://images2.imgbox.com/74/7e/v9RIgQtY_o.jpg" alt="Tagahumika chapter 8" /></a> <a
+                                href="https://imgbox.com/34u7TSOt" target="_blank"><img
+                                        src="https://images2.imgbox.com/27/d0/34u7TSOt_o.png" alt="Tagahumika chapter 8" /></a>
+                </div>
+                <!-- galeri url https://imgbox.com/gallery/edit/OWPXjeJkEM/YpunVDBaTk6rUuKH -->
+                <div class="border atas">Kolom Komentar</div>
+                <div class="bungkus--btn" id="komentar"><button class="komen--btn"
+                                onclick="komentar()">Komentar</button></div>
+                <div class="komen" id="kolom">
+                        <div class="fb-comments"
+                                data-href="https://riztranslation.dee.al/tagahumika/chapter/index.html#8"
+                                data-width="100%" data-numposts="5" data-colorscheme="dark" data-mobile="true">
+                        </div>
+                        <script>
+                                function komentar() {
+                                        const btn = document.getElementById('komentar');
+                                        const kolom = document.getElementById('kolom');
+                                        btn.style.display = 'none';
+                                        kolom.classList.remove("komen")
+                                }
+                        </script>
+                </div>
+                <div class="border bawah"></div>
+        </center>
+        <script>
+                function loads() {
+                        const loading = document.getElementById("loading");
+                        loading.style.display = "none";
+                }
+        </script>
+        <div id="fb-root"></div>
+        <script async defer crossorigin="anonymous"
+                src="https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v15.0" nonce="RTngkwiW"></script>
+</body>
+
+</html>
